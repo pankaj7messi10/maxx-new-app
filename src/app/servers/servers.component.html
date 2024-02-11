@@ -1,3 +1,12 @@
 
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+<button
+ class="btn btn-primary" 
+ [disabled]="!allowNewServer"
+ (click)="setServerStatus()">Add server</button>
 <p>server with id {{serverId}} is {{getServerStatus()}}!</p>
+<p>{{serverCreationStatus}}
+<hr>
+
+<!-- <input type="text" (input)="onInputChange($event)" name="serverName"> -->
+<input type="text" [(ngModel)]="serverName"/>
+<p>{{serverName}}
