@@ -1,0 +1,4 @@
+
+<input [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button [disabled]="userName==''" (click)="resetUserName()">Reset UserName</button>
