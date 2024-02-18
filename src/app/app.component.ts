@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'maxx-new-app';
+  arr : Array<Date> = new Array();
+  displayDetails = true;
+  
+  toggleDetails() {
+    this.displayDetails = !this.displayDetails;
+    this.arr.push(new Date());
+  }
+
+  getBgColor(item) {
+    if(this.arr.indexOf(item) >=4) return 'blue';
+  }
+
+  getClass(item) {
+    if(this.arr.indexOf(item) >=4) return 'whiteColor';
+  }
 }
